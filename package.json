@@ -1,0 +1,51 @@
+{
+  "name": "cloverlauncher",
+  "version": "1.1.0",
+  "description": "CloverLauncher - Minecraft launcher",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "web": "npx http-server . -p 5500 -o",
+    "dist": "electron-builder --win",
+    "publish": "electron-builder --win --publish always"
+  },
+  "author": "bnLatte",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "adm-zip": "^0.5.10",
+    "discord-rpc": "^4.0.1",
+    "electron-updater": "^6.3.9"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.vlauncher.app",
+    "productName": "CloverLauncher",
+    "artifactName": "CloverLauncher Setup.exe",
+    "files": [
+      "**/*",
+      "!README.txt"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/cloverlauncher_logo.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "bnLatte",
+      "repo": "CloverLauncher"
+    }
+  },
+  "allowScripts": {
+    "electron@31.7.7": true
+  }
+}

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CloverLauncher</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="window">
+
+  <!-- TITLE BAR -->
+  <div class="titlebar">
+    <div class="brand">
+      <img src="assets/logo.png" class="brand-logo" alt="CloverLauncher">
+      <span class="brand-name">CloverLauncher</span>
+    </div>
+
+    <div class="win-controls">
+      <button class="win-btn" id="btnMin" title="Küçült">–</button>
+      <button class="win-btn" id="btnMax" title="Büyüt">□</button>
+      <button class="win-btn win-close" id="btnClose" title="Kapat">✕</button>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <nav class="nav">
+        <button class="nav-item active" data-page="haberler">
+          <img src="assets/icon_haberler.png" class="nav-icon" alt="">
+          <span>Haberler</span>
+        </button>
+
+        <button class="nav-item" data-page="oyna">
+          <img src="assets/icon_oyna.png" class="nav-icon" alt="">
+          <span>Oyna</span>
+        </button>
+
+        <button class="nav-item" data-page="ayarlar">
+          <img src="assets/icon_ayarlar.png" class="nav-icon" alt="">
+          <span>Ayarlar</span>
+        </button>
+
+        <button class="nav-item" data-page="surumler">
+          <img src="assets/icon_surumler.png" class="nav-icon" alt="">
+          <span>Sürümler</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button class="discord-btn" id="btnDiscord" title="Discord sunucumuza katıl">
+          <img src="assets/icon_discord.png" class="discord-icon" alt="Discord">
+        </button>
+
+        <div class="dev-info">
+          <span class="dev-label">Geliştirici</span>
+          <span class="dev-name">bnLatte</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+
+      <!-- ================= HABERLER ================= -->
+      <section class="page active" id="page-haberler">
+
+        <div class="news-page">
+
+          <div class="news-page-header">
+            <h2 class="page-title">Haberler</h2>
+            <span class="news-page-subtitle">
+              CloverLauncher güncellemeleri ve duyuruları
+            </span>
+          </div>
+
+          <div class="news-scroll">
+
+            <div class="news-box">
+              <h3>VLauncher artık CloverLauncher!</h3>
+              <p>
+                Yeni bir dönem başlıyor.
+                VLauncher artık yeni adı, yeni kimliği ve yeni hedefleriyle
+                <strong>CloverLauncher</strong> olarak yoluna devam ediyor.
+              </p>
+              <p>
+                CloverLauncher <strong>1.0</strong> ile birlikte Minecraft
+                deneyiminizi daha modern, düzenli ve kullanışlı hale
+                getirmek için geliştirmelerimizi sürdürüyoruz.
+              </p>
+            </div>
+
+            <div class="news-box">
+              <h3>CloverLauncher 1.0 Yayında</h3>
+              <p>
+                CloverLauncher'ın ilk resmi sürümü olan
+                <strong>1.0</strong> artık kullanıma hazır.
+              </p>
+              <p>
+                Minecraft sürüm yönetimi, profiller, Fabric ve Forge desteği,
+                Modrinth entegrasyonu ve daha fazlası artık CloverLauncher
+                deneyiminin bir parçası.
+              </p>
+            </div>
+
+            <div class="news-box">
+              <h3>Yeni Bir Başlangıç</h3>
+              <p>
+                CloverLauncher'ın amacı Minecraft'ı başlatmak için
+                hızlı, modern ve kullanımı kolay bir launcher sunmak.
+              </p>
+              <p>
+                Bu yalnızca bir isim değişikliği değil;
+                CloverLauncher için yeni bir başlangıç.
+              </p>
+            </div>
+
+            <div class="news-box">
+              <h3>Geliştirme Devam Ediyor</h3>
+              <p>
+                CloverLauncher geliştirilmeye devam ediyor.
+                Yeni özellikler, iyileştirmeler ve performans geliştirmeleri
+                gelecekteki sürümlerde kullanıcılarla buluşacak.
+              </p>
+            </div>
+
+            <div class="news-box">
+              <h3>Gelecek Güncellemeler</h3>
+              <p>
+                Launcher'ın sonraki sürümlerinde yeni özellikler,
+                daha fazla özelleştirme seçeneği ve çeşitli iyileştirmeler
+                sunmayı planlıyoruz.
+              </p>
+              <p>
+                CloverLauncher yolculuğu daha yeni başlıyor.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- ================= OYNA ================= -->
+      <section class="page" id="page-oyna">
+
+        <div class="hero" style="background-image:url('assets/background.png')"></div>
+
+        <div class="content-row">
+
+          <div class="news-col">
+            <div class="news-box">
+              <h3>Seçili Profil</h3>
+              <p id="oynaProfileInfo">
+                Henüz bir profil seçmedin.
+                Sürümler sayfasından bir profil oluştur.
+              </p>
+            </div>
+
+            <div class="news-box">
+              <h3>Son Oynananlar</h3>
+              <p id="oynaRecentInfo">
+                Henüz oynanmış bir profil yok.
+              </p>
+            </div>
+          </div>
+
+          <div class="play-col">
+            <div class="profile-select" id="profileSelect2">
+              <img src="assets/icon_skin_default.png" class="profile-skin" alt="">
+              <div class="profile-text">
+                <span class="profile-name" id="profileUserLabel2">Kullanıcı adı</span>
+                <span class="profile-version" id="profileVersionLabel2">1.21.4 (Fabric)</span>
+              </div>
+              <span class="chevron">▼</span>
+              <div class="profile-dropdown" id="profileDropdown2"></div>
+            </div>
+
+            <button class="btn-start" id="btnBaslatOyna">OYNA</button>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================= AYARLAR ================= -->
+      <section class="page" id="page-ayarlar">
+        <div class="panel-scroll">
+          <h2 class="page-title">Ayarlar</h2>
+
+          <div class="settings-card">
+
+            <div class="settings-row">
+              <div>
+                <div class="settings-label">Kullanıcı Adı</div>
+                <div class="settings-desc">Oyun içinde görünecek kullanıcı adın.</div>
+              </div>
+              <input type="text" id="setUsername" class="input" placeholder="Kullanıcı adı" value="Steve">
+            </div>
+
+            <div class="settings-row">
+              <div>
+                <div class="settings-label">RAM Ayırma</div>
+                <div class="settings-desc">Minecraft'a ayrılacak bellek miktarı.</div>
+              </div>
+              <div class="ram-control">
+                <input type="range" id="setRam" min="1" max="16" value="4">
+                <span id="ramValue">4 GB</span>
+              </div>
+            </div>
+
+            <div class="settings-row">
+              <div>
+                <div class="settings-label">Oyun Dizini</div>
+                <div class="settings-desc">Sürümlerin, modların ve dünyaların saklandığı klasör.</div>
+              </div>
+              <div class="path-control">
+                <input type="text" id="setGameDir" class="input" value="C:\Users\CloverLauncher\.cloverlauncher" readonly>
+                <button class="btn-secondary" id="btnBrowseDir">
+                  <img src="assets/icon_folder.png" class="btn-icon" alt=""> Seç
+                </button>
+              </div>
+            </div>
+
+            <div class="settings-row">
+              <div>
+                <div class="settings-label">Java Yolu</div>
+                <div class="settings-desc">Kullanılacak Java çalıştırılabilir dosyası.</div>
+              </div>
+              <div class="path-control">
+                <input type="text" id="setJavaPath" class="input" value="Otomatik algıla" readonly>
+                <button class="btn-secondary" id="btnBrowseJava">
+                  <img src="assets/icon_folder.png" class="btn-icon" alt=""> Seç
+                </button>
+              </div>
+            </div>
+
+            <div class="settings-row">
+              <div>
+                <div class="settings-label">Çözünürlük</div>
+                <div class="settings-desc">Oyun penceresinin başlangıç boyutu.</div>
+              </div>
+              <select id="setRes" class="input">
+                <option>1280x720</option>
+                <option selected>1600x900</option>
+                <option>1920x1080</option>
+                <option>Tam Ekran</option>
+              </select>
+            </div>
+
+            <div class="settings-row">
+              <div>
+                <div class="settings-label">Oyun Açılınca Launcher'ı Kapat</div>
+                <div class="settings-desc">Minecraft başlatıldığında CloverLauncher otomatik kapansın.</div>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="setCloseOnLaunch">
+                <span class="slider-toggle"></span>
+              </label>
+            </div>
+
+          </div>
+
+          <button class="btn-save" id="btnSaveSettings">Ayarları Kaydet</button>
+        </div>
+      </section>
+
+      <!-- ================= SÜRÜMLER ================= -->
+      <section class="page" id="page-surumler">
+
+        <!-- LİSTE -->
+        <div class="panel-scroll" id="surumlerListView">
+          <div class="surumler-header">
+            <h2 class="page-title">Sürümler</h2>
+            <button class="btn-primary" id="btnNewProfile">
+              <img src="assets/icon_plus.png" class="btn-icon" alt=""> Yeni Oluştur
+            </button>
+          </div>
+
+          <div class="profile-grid" id="profileGrid"></div>
+
+          <div class="empty-state" id="profileEmpty">
+            <p>Henüz bir profil oluşturmadın.</p>
+            <p class="empty-sub">
+              Mod, modpack, texture pack veya shader yüklemek için
+              yeni bir profil oluştur.
+            </p>
+          </div>
+        </div>
+
+        <!-- CREATE WIZARD -->
+        <div class="panel-scroll hidden" id="surumlerCreateView">
+          <div class="surumler-header">
+            <button class="btn-back" id="btnBackFromCreate">
+              <img src="assets/icon_back.png" class="btn-icon" alt=""> Geri
+            </button>
+            <h2 class="page-title">Yeni Profil Oluştur</h2>
+          </div>
+
+          <div class="settings-card">
+            <div class="settings-row">
+              <div>
+                <div class="settings-label">Profil Adı</div>
+                <div class="settings-desc">Bu profili tanımlamak için bir isim ver.</div>
+              </div>
+              <input type="text" id="newProfileName" class="input" placeholder="Örn. Chaos Cubed">
+            </div>
+
+            <div class="settings-row">
+              <div>
+                <div class="settings-label">Minecraft Sürümü</div>
+                <div class="settings-desc">Kullanılacak Minecraft sürümü.</div>
+              </div>
+              <select id="newProfileVersion" class="input">
+                <option>1.21.4</option>
+                <option>1.21.1</option>
+                <option>1.20.4</option>
+                <option>1.20.1</option>
+                <option>1.19.4</option>
+                <option>1.16.5</option>
+                <option>1.12.2</option>
+              </select>
+            </div>
+
+            <div class="settings-row">
+              <div>
+                <div class="settings-label">Mod Yükleyici</div>
+                <div class="settings-desc">Mod desteği için bir yükleyici seç.</div>
+              </div>
+              <div class="loader-options" id="loaderOptions">
+                <button class="loader-opt active" data-loader="Vanilla">Vanilla</button>
+                <button class="loader-opt" data-loader="Fabric">Fabric</button>
+                <button class="loader-opt" data-loader="Forge">Forge</button>
+                <button class="loader-opt" data-loader="Quilt">Quilt</button>
+                <button class="loader-opt" data-loader="NeoForge">NeoForge</button>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn-save" id="btnCreateProfile">Profili Oluştur</button>
+        </div>
+
+        <!-- PROFILE DETAIL -->
+        <div class="panel-scroll hidden" id="surumlerDetailView">
+          <div class="surumler-header">
+            <button class="btn-back" id="btnBackFromDetail">
+              <img src="assets/icon_back.png" class="btn-icon" alt=""> Geri
+            </button>
+            <h2 class="page-title" id="detailProfileName">Profil</h2>
+            <button class="btn-danger" id="btnDeleteProfile">Profili Sil</button>
+          </div>
+
+          <div class="detail-tabs" id="detailTabs">
+            <button class="detail-tab active" data-tab="mod">
+              <img src="assets/icon_mod.png" class="tab-icon" alt=""> Mod
+            </button>
+            <button class="detail-tab" data-tab="modpack">
+              <img src="assets/icon_modpack.png" class="tab-icon" alt=""> Modpack
+            </button>
+            <button class="detail-tab" data-tab="texturepack">
+              <img src="assets/icon_texturepack.png" class="tab-icon" alt=""> Texture Pack
+            </button>
+            <button class="detail-tab" data-tab="shader">
+              <img src="assets/icon_shader.png" class="tab-icon" alt=""> Shader
+            </button>
+          </div>
+
+          <div class="vanilla-note hidden" id="vanillaNote">
+            <p><strong>Bu bir Vanilla profildir.</strong></p>
+            <p>
+              Vanilla profillerde mod, texture pack veya shader yüklenemez
+              — saf/orijinal Minecraft deneyimi.
+              Mod, texture pack ve shader eklemek için profili
+              Fabric veya Forge yükleyicisiyle oluştur.
+            </p>
+          </div>
+
+          <!-- MOD -->
+          <div class="tab-panel active" data-tab-panel="mod">
+            <div class="modrinth-search-row">
+              <input type="text" class="input modrinth-search-input" data-kind="mod" placeholder="Modrinth'te mod ara... (örn. Sodium)">
+              <button class="btn-primary modrinth-search-btn" data-kind="mod">Ara</button>
+            </div>
+            <div class="modrinth-results" data-results="mod"></div>
+            <h4 class="installed-title">Kurulu Modlar</h4>
+            <div class="item-list" data-list="mod"></div>
+          </div>
+
+          <!-- MODPACK -->
+          <div class="tab-panel" data-tab-panel="modpack">
+            <div class="modpack-note">
+              <p>
+                Modpack desteği yakında eklenecek.
+                Şimdilik profiline tek tek Modrinth modu,
+                texture pack'i ve shader'ı
+                "Mod / Texture Pack / Shader"
+                sekmelerinden ekleyebilirsin.
+              </p>
+            </div>
+          </div>
+
+          <!-- TEXTURE PACK -->
+          <div class="tab-panel" data-tab-panel="texturepack">
+            <div class="modrinth-search-row">
+              <input type="text" class="input modrinth-search-input" data-kind="texturepack" placeholder="Modrinth'te texture pack ara...">
+              <button class="btn-primary modrinth-search-btn" data-kind="texturepack">Ara</button>
+            </div>
+            <div class="modrinth-results" data-results="texturepack"></div>
+            <h4 class="installed-title">Kurulu Texture Pack'ler</h4>
+            <div class="item-list" data-list="texturepack"></div>
+          </div>
+
+          <!-- SHADER -->
+          <div class="tab-panel" data-tab-panel="shader">
+            <div class="modrinth-search-row">
+              <input type="text" class="input modrinth-search-input" data-kind="shader" placeholder="Modrinth'te shader ara... (örn. Complementary)">
+              <button class="btn-primary modrinth-search-btn" data-kind="shader">Ara</button>
+            </div>
+            <div class="modrinth-results" data-results="shader"></div>
+            <h4 class="installed-title">Kurulu Shader'lar</h4>
+            <div class="item-list" data-list="shader"></div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- LAUNCH OVERLAY -->
+  <div class="launch-overlay hidden" id="launchOverlay">
+    <div class="launch-card">
+      <h3 id="launchTitle">Minecraft hazırlanıyor...</h3>
+
+      <div class="progress-track">
+        <div class="progress-fill" id="launchProgressFill"></div>
+      </div>
+
+      <div class="launch-status" id="launchStatus">Başlatılıyor...</div>
+      <pre class="launch-log" id="launchLog"></pre>
+
+      <div class="launch-actions">
+        <button class="btn-secondary" id="btnStopLaunch">Durdur</button>
+        <button class="btn-save" id="btnCloseLaunch">Kapat</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

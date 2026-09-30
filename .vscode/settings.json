@@ -1,0 +1,6 @@
+{
+  "liveServer.settings.root": "/",
+  "files.exclude": {
+    "node_modules": true
+  }
+}

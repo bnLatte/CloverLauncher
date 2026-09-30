@@ -1,0 +1,56 @@
+Telif Hakkı (c) 2026 bnLatte. Tüm hakları saklıdır.
+
+Bu yazılım ("CloverLauncher") ve ilişkili tüm kaynak kodu, tasarım dosyaları,
+görseller ve dokümantasyon bnLatte'ye aittir ve telif hakkı yasalarıyla
+korunmaktadır.
+
+Bu yazılımın kopyalanmasına, çoğaltılmasına, değiştirilmesine,
+kaynak koduna dayalı türev bir çalışma oluşturulmasına, yeniden
+dağıtılmasına, yayınlanmasına veya bnLatte'nin açık ve yazılı izni
+olmadan başka bir isim/marka altında dağıtılmasına İZİN VERİLMEZ.
+
+Yalnızca aşağıdakilere izin verilir:
+  - Yazılımı, resmî dağıtım kanallarından indirilen haliyle,
+    kişisel/kurumsal amaçla kurup kullanmak.
+
+Aşağıdakiler açıkça YASAKTIR:
+  - Kaynak kodunun tamamının veya bir kısmının kopyalanıp başka bir
+    projede (kendi adınıza veya değiştirilmiş isimle) yeniden
+    yayınlanması.
+  - Yazılımın "asar" veya benzeri bir yöntemle paketinden çıkarılıp
+    yeniden paketlenerek dağıtılması.
+  - Ticari veya ticari olmayan amaçla yeniden satılması, yeniden
+    dağıtılması ya da başka bir üründe kullanılması.
+
+YAZILIM "OLDUĞU GİBİ" SUNULMAKTADIR, HERHANGİ BİR GARANTİ VERİLMEMEKTEDİR.
+BNLATTE, BU YAZILIMIN KULLANIMINDAN DOĞABİLECEK HİÇBİR ZARARDAN SORUMLU
+TUTULAMAZ.
+
+---
+
+Copyright (c) 2026 bnLatte. All rights reserved.
+
+This software ("CloverLauncher") and all associated source code, design
+files, artwork, and documentation are the property of bnLatte and are
+protected by copyright law.
+
+Copying, reproducing, modifying, creating derivative works from,
+redistributing, republishing, or distributing this software under a
+different name/brand without bnLatte's explicit written permission is
+NOT PERMITTED.
+
+Only the following is permitted:
+  - Installing and using the software, as downloaded from official
+    distribution channels, for personal/organizational use.
+
+The following are explicitly PROHIBITED:
+  - Copying all or part of the source code and republishing it in
+    another project (under your own name or a modified name).
+  - Unpacking the software (e.g. via "asar" or similar tools) and
+    repackaging/redistributing it.
+  - Reselling, redistributing, or using this software (or parts of it)
+    in another product, commercially or non-commercially.
+
+THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+BNLATTE SHALL NOT BE LIABLE FOR ANY DAMAGES ARISING FROM THE USE OF
+THIS SOFTWARE.
